@@ -7,6 +7,8 @@ node_js:
 services:
   - mongodb
 script:
+  - npm i -g codecov
   - npm run format
   - npm run test:cov
-
+after_success:
+  - codecov
